@@ -1,0 +1,14 @@
+<h1>Messages#new</h1>
+
+<%= form_with(model: [ @message.denounce, @message ]) do |form| %>
+  <div>
+    <%= form.label :content, style: "display: block" %>
+    <%= form.text_field :content %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
+
+<%= link_to 'back', @message.denounce %>

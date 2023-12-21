@@ -8,3 +8,8 @@
 
   <%= button_to "Destroy this denounce", @denounce, method: :delete %>
 </div>
+
+<div id="messages">
+  <%= render @denounce.messages %>
+</div>
+<%= link_to "New Message", new_denounce_message_path(@denounce) %> |
