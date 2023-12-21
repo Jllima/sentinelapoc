@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Denounces</h1>
+
+<div id="denounces">
+  <% @denounces.each do |denounce| %>
+    <%= render denounce %>
+    <p>
+      <%= link_to "Show this denounce", denounce %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New denounce", new_denounce_path %>

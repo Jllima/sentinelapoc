@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @denounce %>
+
+<div>
+  <%= link_to "Edit this denounce", edit_denounce_path(@denounce) %> |
+  <%= link_to "Back to denounces", denounces_path %>
+
+  <%= button_to "Destroy this denounce", @denounce, method: :delete %>
+</div>
