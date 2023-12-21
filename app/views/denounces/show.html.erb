@@ -1,15 +1,15 @@
 <p style="color: green"><%= notice %></p>
-
-<%= render @denounce %>
-
-<div>
-  <%= link_to "Edit this denounce", edit_denounce_path(@denounce) %> |
-  <%= link_to "Back to denounces", denounces_path %>
-
-  <%= button_to "Destroy this denounce", @denounce, method: :delete %>
-</div>
-
+<%= turbo_frame_tag 'denounce' do %>
+  <p>
+    <strong>Denuncia</strong>
+    <%= render @denounce %>
+  </p>
+  <div>
+    <%= link_to "Edit this denounce", edit_denounce_path(@denounce) %> |
+    <%= link_to "Back to denounces", denounces_path, "data-turbo-frame": "_top" %>
+  </div>
+<% end %>
 <div id="messages">
   <%= render @denounce.messages %>
 </div>
-<%= link_to "New Message", new_denounce_message_path(@denounce) %> |
+<%= turbo_frame_tag "new_message", src: new_denounce_message_path(@denounce), target: "_top" %>

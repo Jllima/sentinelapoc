@@ -1,6 +1,9 @@
 <h1>Editing denounce</h1>
 
-<%= render "form", denounce: @denounce %>
+<%= turbo_frame_tag 'denounce' do %>
+  <%= render "form", denounce: @denounce %>
+<% end %>
+
 
 <br>
 
