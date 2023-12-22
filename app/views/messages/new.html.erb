@@ -1,11 +1,9 @@
 <%= turbo_frame_tag "new_message", target: "_top" do %>
-  <%= form_with(model: [ @message.denounce, @message ]) do |form| %>
-    <div>
-      <%= form.label :content, style: "display: block" %>
+  <%= form_with(model: [ @message.denounce, @message ], 
+        data: { controller: "reset-form", action: "turbo:submit-end->reset-form#reset" }) do |form| %>
+    <div class="field">
       <%= form.text_field :content %>
-    </div>
-    <div>
-      <%= form.submit %>
+      <%= form.submit "Send"%>
     </div>
   <% end %>
 <% end %>
