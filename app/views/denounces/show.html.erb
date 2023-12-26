@@ -1,9 +1,10 @@
 <p style="color: green"><%= notice %></p>
+
+<%= turbo_stream_from @denounce %>
+
 <%= turbo_frame_tag 'denounce' do %>
-  <p>
-    <strong>Denuncia</strong>
-    <%= render @denounce %>
-  </p>
+  <%= render @denounce %>
+
   <div>
     <%= link_to "Edit this denounce", edit_denounce_path(@denounce) %> |
     <%= link_to "Back to denounces", denounces_path, "data-turbo-frame": "_top" %>
