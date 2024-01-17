@@ -2,6 +2,9 @@ source 'https://rubygems.org'
 
 ruby '3.2.2'
 
+gem 'bootstrap', '~> 5.3.2'
+gem 'sass-rails'
+gem 'jquery-rails'
 gem 'fcm'
 gem 'geocoder'
 gem 'importmap-rails'
